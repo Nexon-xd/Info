@@ -1,0 +1,281 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Adarsh Tiwari - Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&family=Montserrat:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Raleway', sans-serif;
+        }
+        .header-title {
+            font-family: 'Pacifico', cursive;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .animated-bg {
+            background: linear-gradient(270deg, #ff9a9e, #fad0c4, #ff9a9e, #fad0c4);
+            background-size: 800% 800%;
+            animation: gradientAnimation 10s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-text {
+            background: linear-gradient(90deg, #ff9a9e, #fad0c4, #ff9a9e, #fad0c4);
+            background-size: 400% 400%;
+            animation: textAnimation 5s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes textAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
+        @keyframes slideIn {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(0); }
+        }
+        .wave {
+            position: relative;
+            width: 100%;
+            height: 15vh;
+            margin-bottom: -7px; /* Fix for safari gap */
+            min-height: 100px;
+            max-height: 150px;
+        }
+        .wave:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -10px;
+            width: 100%;
+            height: 100px;
+            background: url('https://storage.googleapis.com/a1aa/image/1.png') repeat-x;
+            animation: wave 10s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0);
+        }
+        .wave:after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100px;
+            background: url('https://storage.googleapis.com/a1aa/image/2.png') repeat-x;
+            animation: wave 18s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+            transform: translate3d(0, 0, 0);
+        }
+        @keyframes wave {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-1600px);
+            }
+        }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800">
+  <header class="animated-bg text-white py-4">
+   <div class="container mx-auto px-4 text-center">
+    <div class="text-4xl font-bold header-title">
+     Adarsh Tiwari
+    </div>
+   </div>
+  </header>
+  <main class="container mx-auto px-4 py-8">
+   <section class="mb-12" id="about">
+    <div class="text-center relative">
+     <div class="relative z-10">
+      <img alt="Anime profile picture of Adarsh Tiwari" class="rounded-full w-32 h-32 mx-auto mb-4 pulse" height="150" src="https://storage.googleapis.com/a1aa/image/pf1iPrjhYJVfLUZlngHFsQM4mGu9Ataekn5cXlMlabbzwKfOB.jpg" width="150"/>
+     </div>
+     <h1 class="text-4xl font-bold mb-2 animated-text">
+      Adarsh Tiwari
+     </h1>
+     <p class="text-lg">
+      I am a passionate software developer with a knack for creating elegant solutions to complex problems. With a strong background in web development and a keen eye for design, I strive to build applications that are both functional and aesthetically pleasing.
+     </p>
+    </div>
+   </section>
+   <section class="mb-12" id="projects">
+    <h2 class="text-3xl font-bold mb-4 text-center animated-text">
+     Projects
+    </h2>
+    <div class="grid grid-cols-1 gap-6">
+     <div class="bg-white p-4 rounded-lg shadow-lg card floating">
+      <img alt="Screenshot of Project 1" class="rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/4cuuNfg4oyUvN66rt0g2LczyX9nZd5MTWHIGbjSeSKbWYlvTA.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 1
+      </h3>
+      <p class="text-gray-700">
+       A web application that allows users to track their daily tasks and manage their time efficiently.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-lg card floating">
+      <img alt="Screenshot of Project 2" class="rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/ObeCjmHSVVRyAq9CZ4TZC90ioLRoadHglJp31EfF2cNaYlvTA.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 2
+      </h3>
+      <p class="text-gray-700">
+       An e-commerce platform that provides a seamless shopping experience with a user-friendly interface.
+      </p>
+     </div>
+     <div class="bg-white p-4 rounded-lg shadow-lg card floating">
+      <img alt="Screenshot of Project 3" class="rounded mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/ElOd8ywRkhpoN16NswJgDIxak4yxFmzcx7duX5PxfQhLsy3JA.jpg" width="300"/>
+      <h3 class="text-xl font-bold mb-2">
+       Project 3
+      </h3>
+      <p class="text-gray-700">
+       A mobile app that helps users stay fit by providing personalized workout plans and tracking their progress.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-12" id="education">
+    <h2 class="text-3xl font-bold mb-4 text-center animated-text">
+     Education
+    </h2>
+    <div class="bg-white p-4 rounded-lg shadow-lg mb-4 card bounce">
+     <h3 class="text-xl font-bold mb-2">
+      Bachelor of Technology in Computer Science
+     </h3>
+     <p class="text-gray-700">
+      XYZ University, 2015 - 2019
+     </p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-lg mb-4 card bounce">
+     <h3 class="text-xl font-bold mb-2">
+      Master of Science in Software Engineering
+     </h3>
+     <p class="text-gray-700">
+      ABC Institute of Technology, 2019 - 2021
+     </p>
+    </div>
+   </section>
+   <section class="mb-12" id="skills">
+    <h2 class="text-3xl font-bold mb-4 text-center animated-text">
+     Skills
+    </h2>
+    <div class="bg-white p-4 rounded-lg shadow-lg card slide-in">
+     <ul class="list-disc list-inside">
+      <li class="text-gray-700">
+       JavaScript
+      </li>
+      <li class="text-gray-700">
+       React
+      </li>
+      <li class="text-gray-700">
+       Node.js
+      </li>
+      <li class="text-gray-700">
+       HTML &amp; CSS
+      </li>
+      <li class="text-gray-700">
+       Python
+      </li>
+      <li class="text-gray-700">
+       SQL
+      </li>
+      <li class="text-gray-700">
+       Git &amp; GitHub
+      </li>
+     </ul>
+    </div>
+   </section>
+   <section class="mb-12" id="contact">
+    <h2 class="text-3xl font-bold mb-4 text-center animated-text">
+     Contact
+    </h2>
+    <form class="bg-white p-4 rounded-lg shadow-lg card slide-in">
+     <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="name">
+       Name
+      </label>
+      <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="name" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="email">
+       Email
+      </label>
+      <input class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="email" type="email"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-700 font-bold mb-2" for="message">
+       Message
+      </label>
+      <textarea class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" id="message"></textarea>
+     </div>
+     <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600" type="submit">
+      Send
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="animated-bg text-white py-4">
+   <div class="container mx-auto px-4 text-center">
+    <p>
+     © 2023 Adarsh Tiwari. All rights reserved.
+    </p>
+    <div class="mt-4 space-x-4">
+     <a class="hover:text-gray-200" href="#">
+      <i class="fab fa-linkedin">
+      </i>
+     </a>
+     <a class="hover:text-gray-200" href="#">
+      <i class="fab fa-github">
+      </i>
+     </a>
+     <a class="hover:text-gray-200" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+    </div>
+   </div>
+   <div class="wave">
+   </div>
+  </footer>
+ </body>
+</html>
